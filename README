@@ -2,3 +2,31 @@ pocs	    - proof-of-concept micro-apps for exploring new technologies
 backend     - the node.js :! 
 receiver - contains the client web app
 transmitter - contains the data submission web app
+
+===============
+= Simple API doc
+===============
+The rest service will have the following calls:
+/user
+GET - gets all of the users
+POST - creates a single user
+DELETE - removes all users
+
+/user/id
+GET - gets a specified user
+PUT - updates a specified user
+DELETE - removes the specified user
+
+/point
+GET - gets all of the points
+POST - creates a single point
+DELETE - removes all points
+
+/point/id
+GET - gets a specified point
+PUT - updates a specified point
+DELETE - removes a specified point
+
+JSON will be structured in the following way:
+user:  {id:123,name:"some name"}
+point: {id:123,lat:123.456,long:-123.456,timestamp:123456789,user_id:123}}
