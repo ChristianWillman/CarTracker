@@ -22,6 +22,56 @@
         };
         var map = new google.maps.Map(document.getElementById("map_canvas"),
             myOptions);
+
+        displayPoints(mockPoints(), map);
+      }
+      
+      function getPointsFromService() {
+        $.ajax({
+          url: 'http://johnsroastport.net/CarTracker/point',
+          dataType: 'json',
+          success: function(data) {
+            displayPoints(data);
+          }
+        });
+      }
+
+      function mockPoints() {
+        var points = [
+          {
+            id:1,
+            lat:39.82,
+            long:-75.23,
+            timestamp:0,
+            user_id:1
+          },
+          {
+            id:2,
+            lat:39.85,
+            long:-75.26,
+            timestamp:0,
+            user_id:1
+          },
+          {
+            id:3,
+            lat:39.90,
+            long:-75,
+            timestamp:0,
+            user_id:1
+          }
+        ];
+
+        return points;
+      }
+
+      function displayPoints(data, map) {
+        for(var i = 0; i < data.length; i++) {
+          new google.maps.Marker({
+            position: new google.maps.LatLng(data[i].lat, data[i].long), 
+            map: map,
+            title:"point " + i
+            }); 
+        }
       }
     </script>
   </head>
