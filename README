@@ -1,3 +1,4 @@
-backend - contains the Ruby on Rails RESTful Web Service
+pocs	    - proof-of-concept micro-apps for exploring new technologies
+backend     - the node.js :! 
 receiver - contains the client web app
 transmitter - contains the data submission web app
