@@ -5,7 +5,7 @@ transmitter - the data submission web-app
 
 ==================
 = Simple API doc =
-===================
+==================
 The REST service will have the following calls:
 /user
 GET    - gets all of the users
