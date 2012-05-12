@@ -1,0 +1,1 @@
+This proof of concept uses Google Maps to plot the points that are provided by our web service.  In short, it will just call /point and have the option of calling /point/id.
